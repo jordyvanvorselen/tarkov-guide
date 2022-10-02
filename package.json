@@ -2,11 +2,10 @@
   "name": "tarkov-guide",
   "version": "0.1.0",
   "description": "A web application that helps players stacking quests in the online shooter Escape from Tarkov.",
-  "main": "static/dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel build static/src/parcel-entry.js",
-    "watch": "parcel watch static/src/parcel-entry.js --hmr-port 34471"
+    "build": "parcel build static/src/parcel-entry.js --dist-dir static/dist",
+    "watch": "parcel watch static/src/parcel-entry.js --hmr-port 34471 --dist-dir static/dist"
   },
   "repository": {
     "type": "git",
