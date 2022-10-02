@@ -27,6 +27,8 @@
   "homepage": "https://github.com/jordyvanvorselen/tarkov-guide#readme",
   "devDependencies": {
     "parcel": "^2.7.0",
-    "prettier": "^2.7.1"
+    "postcss": "^8.4.17",
+    "prettier": "^2.7.1",
+    "tailwindcss": "^3.1.8"
   }
 }
