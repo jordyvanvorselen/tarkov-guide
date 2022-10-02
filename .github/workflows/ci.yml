@@ -24,7 +24,7 @@ jobs:
         run: poetry run flake8
       - uses: psf/black@stable
       - name: Run ESLint
-        run: eslint . --ext .js,.jsx,.ts,.tsx
+        run: yarn eslint ./static/src/**/*.js
       - name: Run prettier
         uses: creyD/prettier_action@v4.2
       - name: Run pytest unit tests
