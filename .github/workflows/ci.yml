@@ -16,8 +16,6 @@ jobs:
         uses: Borales/actions-yarn@v3
         with:
           cmd: install
-      - name: Manual cypress install
-        run: yarn cypress install
       - name: Cache Cypress binary
         uses: actions/cache@v1
         with:
