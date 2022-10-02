@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "tarkov-guide"
+version = "0.1.0"
+description = "A web application that helps players stacking quests in the online shooter Escape from Tarkov."
+authors = ["Jordy van Vorselen <jordyvanvorselen@gmail.com>"]
+license = "GNU Affero General Public License v3.0"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Django = "^4.1.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
