@@ -131,3 +131,9 @@ dmypy.json
 # Nodejs
 /node_modules
 .parcel-cache
+
+# Cypress
+cypress/results/*
+cypress/reports/*
+cypress/screenshots/*
+cypress/videos/*
