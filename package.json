@@ -26,7 +26,6 @@
   },
   "homepage": "https://github.com/jordyvanvorselen/tarkov-guide#readme",
   "devDependencies": {
-    "@parcel/transformer-sass": "2.7.0",
     "parcel": "^2.7.0",
     "prettier": "^2.7.1"
   }
