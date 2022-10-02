@@ -16,7 +16,7 @@ jobs:
         uses: Borales/actions-yarn@v3
         with:
           cmd: install
-       - name: Cache Cypress binary
+      - name: Cache Cypress binary
         uses: actions/cache@v1
         with:
           path: ~/.cache/Cypress
