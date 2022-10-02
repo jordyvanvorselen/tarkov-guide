@@ -15,3 +15,9 @@ After this, you can run start the webserver using:
 ```bash
 $ poetry run python manage.py runserver
 ```
+
+To watch and automatically re-compile the frontend assets, run:
+
+```bash
+$ yarn watch
+```
