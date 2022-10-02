@@ -16,6 +16,13 @@ jobs:
         uses: Borales/actions-yarn@v3
         with:
           cmd: install
+       - name: Cache Cypress binary
+        uses: actions/cache@v1
+        with:
+          path: ~/.cache/Cypress
+          key: cypress-${{ runner.os }}-cypress-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            cypress-${{ runner.os }}-cypress-
       - name: Build JS bundle
         uses: Borales/actions-yarn@v3
         with:
