@@ -1,7 +1,7 @@
 import React from "react";
 
 const App = () => {
-  return <div className="bg-slate-900 h-full w-full"></div>
-}
+  return <div className="map customs">Test</div>;
+};
 
 export default App;

@@ -1,0 +1,31 @@
+name: Continuous Integration
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v2
+        with:
+          python-version: "3.10.5"
+      - name: Install poetry
+        uses: snok/install-poetry@v1.3.1
+      - name: Poetry install
+        run: poetry install
+      - name: Yarn install
+        uses: Borales/actions-yarn@v3
+        with:
+          cmd: install
+      - name: Build JS bundle
+        uses: Borales/actions-yarn@v3
+        with:
+          cmd: build
+      - name: Run flake8
+        run: poetry run flake8
+      - uses: psf/black@stable
+      - name: Run pytest unit tests
+        run: poetry run pytest
+      - name: Run cypress feature tests
+        uses: cypress-io/github-action@v4
+        with:
+          start: poetry run python manage.py runserver

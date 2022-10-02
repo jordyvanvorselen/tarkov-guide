@@ -8,6 +8,8 @@ license = "GNU Affero General Public License v3.0"
 [tool.poetry.dependencies]
 python = "^3.10"
 Django = "^4.1.1"
+pytest-django = "^4.5.2"
+flake8-django = "^1.1.5"
 
 [tool.poetry.dev-dependencies]
 
