@@ -1,3 +1,5 @@
+# flake8: noqa
+
 """
 Django settings for tarkov_guide project.
 
