@@ -7,6 +7,7 @@ body,
 #react-root {
   margin: 0;
   height: 100%;
+  overflow: hidden;
 }
 
 div[class^="react-transform"] {
@@ -15,18 +16,18 @@ div[class^="react-transform"] {
 }
 
 .map {
-  padding-left: 1%;
-  padding-top: 4%;
   width: 75%;
   height: 100%;
+  display: inline-block;
 
   canvas {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+
     &.customs {
       background-image: url("../img/customs.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      width: 100%;
-      height: 100%;
     }
   }
 }
