@@ -29,6 +29,8 @@ jobs:
         run: yarn eslint ./static/src/**/*.js
       - name: Run prettier
         run: yarn prettier --check ./static/src/**/*.js
+      - name: Run mypy
+        run: poetry run mypy --strict tarkov_guide/**/*.py
       - name: Run pytest unit tests
         run: poetry run pytest
       - name: Run cypress feature tests
