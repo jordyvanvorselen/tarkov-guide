@@ -52,7 +52,7 @@ bcrypt = ["bcrypt"]
 name = "django-stubs"
 version = "1.12.0"
 description = "Mypy stubs for Django"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 
@@ -75,7 +75,7 @@ compatible-mypy = ["mypy (>=0.930,<0.970)"]
 name = "django-stubs-ext"
 version = "0.5.0"
 description = "Monkey-patching and extensions for django-stubs"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
 
@@ -127,7 +127,7 @@ python-versions = ">=3.6"
 name = "mypy"
 version = "0.961"
 description = "Optional static typing for Python"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
 
@@ -145,7 +145,7 @@ reports = ["lxml"]
 name = "mypy-extensions"
 version = "0.4.3"
 description = "Experimental type system extensions for programs checked with the mypy typechecker."
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -262,7 +262,7 @@ python-versions = ">=3.7"
 name = "types-pytz"
 version = "2022.4.0.0"
 description = "Typing stubs for pytz"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -270,7 +270,7 @@ python-versions = "*"
 name = "types-pyyaml"
 version = "6.0.12"
 description = "Typing stubs for PyYAML"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -278,7 +278,7 @@ python-versions = "*"
 name = "typing-extensions"
 version = "4.4.0"
 description = "Backported and Experimental Type Hints for Python 3.7+"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 
@@ -293,7 +293,7 @@ python-versions = ">=2"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "658a179d0961f5f327c8dc5c223ed6b943a3e7fba69abfe72c6fa6e91f68aaa1"
+content-hash = "9124abfab7d21501e1bf2f9e1ac75289feb4c89914334e0c3439b852b90ad2ea"
 
 [metadata.files]
 asgiref = [
