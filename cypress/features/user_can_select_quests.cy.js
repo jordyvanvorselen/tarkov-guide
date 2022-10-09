@@ -42,4 +42,20 @@ describe("when the user arrives on the home page", () => {
     firstQuest.should("have.class", "selected");
     secondQuest.should("have.class", "selected");
   });
+
+  it("selected quests are not filtered always, they are always visible", () => {
+    cy.visit("/");
+
+    const quest = cy.contains(".quest", "Shortage");
+
+    quest.click();
+
+    cy.get(".quest-selector")
+      .get("input[placeholder*='Filter quests']")
+      .type("Operati");
+
+    cy.contains(".quest", "Operation Aquarius - Part 1").should("be.visible");
+    cy.contains(".quest", "Shortage").should("be.visible");
+    cy.contains(".quest", "Painkiller").should("not.exist");
+  });
 });
