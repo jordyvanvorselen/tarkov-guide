@@ -2,7 +2,7 @@ import React from "react";
 
 const QuestSelector = () => {
   return (
-    <div className="quest-selector absolute inset-y-0 right-0 w-62 top-20 right-10">
+    <div className="quest-selector absolute inset-y-0 right-0 w-96 top-20 right-8">
       <div className="lg:col-span-5 xl:col-span-6 flex flex-col">
         <div className="relative z-10 rounded-xl bg-white shadow-xl ring-1 ring-slate-900/5 overflow-hidden my-auto xl:mt-18 bg-slate-800">
           <section>
@@ -34,7 +34,709 @@ const QuestSelector = () => {
                 />
               </div>
             </header>
-            <ul className="bg-slate-50 p-4 sm:px-8 sm:pt-6 sm:pb-8 lg:p-4 xl:px-8 xl:pt-6 xl:pb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 text-sm leading-6 bg-slate-900/40 ring-1 dark:ring-white/5">
+            <ul className="bg-slate-50 p-4 sm:px-8 sm:pt-6 sm:pb-8 lg:p-4 xl:px-8 xl:pt-6 xl:pb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 text-sm leading-6 bg-slate-900/40 ring-1 dark:ring-white/5 max-height-80 overflow-y-scroll">
+              <li className="group cursor-pointer rounded-md p-3 bg-white ring-1 ring-slate-200 shadow-sm hover:bg-blue-500 hover:ring-blue-500 hover:shadow-md bg-slate-700 ring-0 dark:highlight-white/10 dark:hover:bg-blue-500">
+                <dl className="grid sm:block lg:grid xl:block grid-cols-2 grid-rows-2 items-center">
+                  <div>
+                    <dt className="sr-only">Title</dt>
+                    <dd className="font-semibold text-slate-900 group-hover:text-white text-slate-100">
+                      API Integration
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="sr-only">Category</dt>
+                    <dd className="group-hover:text-blue-200">Engineering</dd>
+                  </div>
+                  <div className="col-start-2 row-start-1 row-end-3 sm:mt-4 lg:mt-0 xl:mt-4">
+                    <dt className="sr-only">Users</dt>
+                    <dd className="flex justify-end sm:justify-start lg:justify-end xl:justify-start -space-x-1.5">
+                      <img
+                        src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1546525848-3ce03ca516f6?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </dd>
+                  </div>
+                </dl>
+              </li>
+              <li className="group cursor-pointer rounded-md p-3 bg-white ring-1 ring-slate-200 shadow-sm hover:bg-blue-500 hover:ring-blue-500 hover:shadow-md bg-slate-700 ring-0 dark:highlight-white/10 dark:hover:bg-blue-500">
+                <dl className="grid sm:block lg:grid xl:block grid-cols-2 grid-rows-2 items-center">
+                  <div>
+                    <dt className="sr-only">Title</dt>
+                    <dd className="font-semibold text-slate-900 group-hover:text-white text-slate-100">
+                      API Integration
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="sr-only">Category</dt>
+                    <dd className="group-hover:text-blue-200">Engineering</dd>
+                  </div>
+                  <div className="col-start-2 row-start-1 row-end-3 sm:mt-4 lg:mt-0 xl:mt-4">
+                    <dt className="sr-only">Users</dt>
+                    <dd className="flex justify-end sm:justify-start lg:justify-end xl:justify-start -space-x-1.5">
+                      <img
+                        src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1546525848-3ce03ca516f6?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </dd>
+                  </div>
+                </dl>
+              </li>
+              <li className="group cursor-pointer rounded-md p-3 bg-white ring-1 ring-slate-200 shadow-sm hover:bg-blue-500 hover:ring-blue-500 hover:shadow-md bg-slate-700 ring-0 dark:highlight-white/10 dark:hover:bg-blue-500">
+                <dl className="grid sm:block lg:grid xl:block grid-cols-2 grid-rows-2 items-center">
+                  <div>
+                    <dt className="sr-only">Title</dt>
+                    <dd className="font-semibold text-slate-900 group-hover:text-white text-slate-100">
+                      API Integration
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="sr-only">Category</dt>
+                    <dd className="group-hover:text-blue-200">Engineering</dd>
+                  </div>
+                  <div className="col-start-2 row-start-1 row-end-3 sm:mt-4 lg:mt-0 xl:mt-4">
+                    <dt className="sr-only">Users</dt>
+                    <dd className="flex justify-end sm:justify-start lg:justify-end xl:justify-start -space-x-1.5">
+                      <img
+                        src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1546525848-3ce03ca516f6?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </dd>
+                  </div>
+                </dl>
+              </li>
+              <li className="group cursor-pointer rounded-md p-3 bg-white ring-1 ring-slate-200 shadow-sm hover:bg-blue-500 hover:ring-blue-500 hover:shadow-md bg-slate-700 ring-0 dark:highlight-white/10 dark:hover:bg-blue-500">
+                <dl className="grid sm:block lg:grid xl:block grid-cols-2 grid-rows-2 items-center">
+                  <div>
+                    <dt className="sr-only">Title</dt>
+                    <dd className="font-semibold text-slate-900 group-hover:text-white text-slate-100">
+                      API Integration
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="sr-only">Category</dt>
+                    <dd className="group-hover:text-blue-200">Engineering</dd>
+                  </div>
+                  <div className="col-start-2 row-start-1 row-end-3 sm:mt-4 lg:mt-0 xl:mt-4">
+                    <dt className="sr-only">Users</dt>
+                    <dd className="flex justify-end sm:justify-start lg:justify-end xl:justify-start -space-x-1.5">
+                      <img
+                        src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1546525848-3ce03ca516f6?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </dd>
+                  </div>
+                </dl>
+              </li>
+              <li className="group cursor-pointer rounded-md p-3 bg-white ring-1 ring-slate-200 shadow-sm hover:bg-blue-500 hover:ring-blue-500 hover:shadow-md bg-slate-700 ring-0 dark:highlight-white/10 dark:hover:bg-blue-500">
+                <dl className="grid sm:block lg:grid xl:block grid-cols-2 grid-rows-2 items-center">
+                  <div>
+                    <dt className="sr-only">Title</dt>
+                    <dd className="font-semibold text-slate-900 group-hover:text-white text-slate-100">
+                      API Integration
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="sr-only">Category</dt>
+                    <dd className="group-hover:text-blue-200">Engineering</dd>
+                  </div>
+                  <div className="col-start-2 row-start-1 row-end-3 sm:mt-4 lg:mt-0 xl:mt-4">
+                    <dt className="sr-only">Users</dt>
+                    <dd className="flex justify-end sm:justify-start lg:justify-end xl:justify-start -space-x-1.5">
+                      <img
+                        src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1546525848-3ce03ca516f6?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </dd>
+                  </div>
+                </dl>
+              </li>
+              <li className="group cursor-pointer rounded-md p-3 bg-white ring-1 ring-slate-200 shadow-sm hover:bg-blue-500 hover:ring-blue-500 hover:shadow-md bg-slate-700 ring-0 dark:highlight-white/10 dark:hover:bg-blue-500">
+                <dl className="grid sm:block lg:grid xl:block grid-cols-2 grid-rows-2 items-center">
+                  <div>
+                    <dt className="sr-only">Title</dt>
+                    <dd className="font-semibold text-slate-900 group-hover:text-white text-slate-100">
+                      API Integration
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="sr-only">Category</dt>
+                    <dd className="group-hover:text-blue-200">Engineering</dd>
+                  </div>
+                  <div className="col-start-2 row-start-1 row-end-3 sm:mt-4 lg:mt-0 xl:mt-4">
+                    <dt className="sr-only">Users</dt>
+                    <dd className="flex justify-end sm:justify-start lg:justify-end xl:justify-start -space-x-1.5">
+                      <img
+                        src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1546525848-3ce03ca516f6?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </dd>
+                  </div>
+                </dl>
+              </li>
+              <li className="group cursor-pointer rounded-md p-3 bg-white ring-1 ring-slate-200 shadow-sm hover:bg-blue-500 hover:ring-blue-500 hover:shadow-md bg-slate-700 ring-0 dark:highlight-white/10 dark:hover:bg-blue-500">
+                <dl className="grid sm:block lg:grid xl:block grid-cols-2 grid-rows-2 items-center">
+                  <div>
+                    <dt className="sr-only">Title</dt>
+                    <dd className="font-semibold text-slate-900 group-hover:text-white text-slate-100">
+                      API Integration
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="sr-only">Category</dt>
+                    <dd className="group-hover:text-blue-200">Engineering</dd>
+                  </div>
+                  <div className="col-start-2 row-start-1 row-end-3 sm:mt-4 lg:mt-0 xl:mt-4">
+                    <dt className="sr-only">Users</dt>
+                    <dd className="flex justify-end sm:justify-start lg:justify-end xl:justify-start -space-x-1.5">
+                      <img
+                        src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1546525848-3ce03ca516f6?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </dd>
+                  </div>
+                </dl>
+              </li>
+              <li className="group cursor-pointer rounded-md p-3 bg-white ring-1 ring-slate-200 shadow-sm hover:bg-blue-500 hover:ring-blue-500 hover:shadow-md bg-slate-700 ring-0 dark:highlight-white/10 dark:hover:bg-blue-500">
+                <dl className="grid sm:block lg:grid xl:block grid-cols-2 grid-rows-2 items-center">
+                  <div>
+                    <dt className="sr-only">Title</dt>
+                    <dd className="font-semibold text-slate-900 group-hover:text-white text-slate-100">
+                      API Integration
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="sr-only">Category</dt>
+                    <dd className="group-hover:text-blue-200">Engineering</dd>
+                  </div>
+                  <div className="col-start-2 row-start-1 row-end-3 sm:mt-4 lg:mt-0 xl:mt-4">
+                    <dt className="sr-only">Users</dt>
+                    <dd className="flex justify-end sm:justify-start lg:justify-end xl:justify-start -space-x-1.5">
+                      <img
+                        src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1546525848-3ce03ca516f6?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </dd>
+                  </div>
+                </dl>
+              </li>
+              <li className="group cursor-pointer rounded-md p-3 bg-white ring-1 ring-slate-200 shadow-sm hover:bg-blue-500 hover:ring-blue-500 hover:shadow-md bg-slate-700 ring-0 dark:highlight-white/10 dark:hover:bg-blue-500">
+                <dl className="grid sm:block lg:grid xl:block grid-cols-2 grid-rows-2 items-center">
+                  <div>
+                    <dt className="sr-only">Title</dt>
+                    <dd className="font-semibold text-slate-900 group-hover:text-white text-slate-100">
+                      API Integration
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="sr-only">Category</dt>
+                    <dd className="group-hover:text-blue-200">Engineering</dd>
+                  </div>
+                  <div className="col-start-2 row-start-1 row-end-3 sm:mt-4 lg:mt-0 xl:mt-4">
+                    <dt className="sr-only">Users</dt>
+                    <dd className="flex justify-end sm:justify-start lg:justify-end xl:justify-start -space-x-1.5">
+                      <img
+                        src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1546525848-3ce03ca516f6?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </dd>
+                  </div>
+                </dl>
+              </li>
+              <li className="group cursor-pointer rounded-md p-3 bg-white ring-1 ring-slate-200 shadow-sm hover:bg-blue-500 hover:ring-blue-500 hover:shadow-md bg-slate-700 ring-0 dark:highlight-white/10 dark:hover:bg-blue-500">
+                <dl className="grid sm:block lg:grid xl:block grid-cols-2 grid-rows-2 items-center">
+                  <div>
+                    <dt className="sr-only">Title</dt>
+                    <dd className="font-semibold text-slate-900 group-hover:text-white text-slate-100">
+                      API Integration
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="sr-only">Category</dt>
+                    <dd className="group-hover:text-blue-200">Engineering</dd>
+                  </div>
+                  <div className="col-start-2 row-start-1 row-end-3 sm:mt-4 lg:mt-0 xl:mt-4">
+                    <dt className="sr-only">Users</dt>
+                    <dd className="flex justify-end sm:justify-start lg:justify-end xl:justify-start -space-x-1.5">
+                      <img
+                        src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1546525848-3ce03ca516f6?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </dd>
+                  </div>
+                </dl>
+              </li>
+              <li className="group cursor-pointer rounded-md p-3 bg-white ring-1 ring-slate-200 shadow-sm hover:bg-blue-500 hover:ring-blue-500 hover:shadow-md bg-slate-700 ring-0 dark:highlight-white/10 dark:hover:bg-blue-500">
+                <dl className="grid sm:block lg:grid xl:block grid-cols-2 grid-rows-2 items-center">
+                  <div>
+                    <dt className="sr-only">Title</dt>
+                    <dd className="font-semibold text-slate-900 group-hover:text-white text-slate-100">
+                      API Integration
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="sr-only">Category</dt>
+                    <dd className="group-hover:text-blue-200">Engineering</dd>
+                  </div>
+                  <div className="col-start-2 row-start-1 row-end-3 sm:mt-4 lg:mt-0 xl:mt-4">
+                    <dt className="sr-only">Users</dt>
+                    <dd className="flex justify-end sm:justify-start lg:justify-end xl:justify-start -space-x-1.5">
+                      <img
+                        src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1546525848-3ce03ca516f6?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </dd>
+                  </div>
+                </dl>
+              </li>
+              <li className="group cursor-pointer rounded-md p-3 bg-white ring-1 ring-slate-200 shadow-sm hover:bg-blue-500 hover:ring-blue-500 hover:shadow-md bg-slate-700 ring-0 dark:highlight-white/10 dark:hover:bg-blue-500">
+                <dl className="grid sm:block lg:grid xl:block grid-cols-2 grid-rows-2 items-center">
+                  <div>
+                    <dt className="sr-only">Title</dt>
+                    <dd className="font-semibold text-slate-900 group-hover:text-white text-slate-100">
+                      API Integration
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="sr-only">Category</dt>
+                    <dd className="group-hover:text-blue-200">Engineering</dd>
+                  </div>
+                  <div className="col-start-2 row-start-1 row-end-3 sm:mt-4 lg:mt-0 xl:mt-4">
+                    <dt className="sr-only">Users</dt>
+                    <dd className="flex justify-end sm:justify-start lg:justify-end xl:justify-start -space-x-1.5">
+                      <img
+                        src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1546525848-3ce03ca516f6?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </dd>
+                  </div>
+                </dl>
+              </li>
+              <li className="group cursor-pointer rounded-md p-3 bg-white ring-1 ring-slate-200 shadow-sm hover:bg-blue-500 hover:ring-blue-500 hover:shadow-md bg-slate-700 ring-0 dark:highlight-white/10 dark:hover:bg-blue-500">
+                <dl className="grid sm:block lg:grid xl:block grid-cols-2 grid-rows-2 items-center">
+                  <div>
+                    <dt className="sr-only">Title</dt>
+                    <dd className="font-semibold text-slate-900 group-hover:text-white text-slate-100">
+                      API Integration
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="sr-only">Category</dt>
+                    <dd className="group-hover:text-blue-200">Engineering</dd>
+                  </div>
+                  <div className="col-start-2 row-start-1 row-end-3 sm:mt-4 lg:mt-0 xl:mt-4">
+                    <dt className="sr-only">Users</dt>
+                    <dd className="flex justify-end sm:justify-start lg:justify-end xl:justify-start -space-x-1.5">
+                      <img
+                        src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1546525848-3ce03ca516f6?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&amp;fit=facearea&amp;facepad=2&amp;w=48&amp;h=48&amp;q=80"
+                        alt=""
+                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white ring-slate-700 group-hover:ring-white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </dd>
+                  </div>
+                </dl>
+              </li>
               <li className="group cursor-pointer rounded-md p-3 bg-white ring-1 ring-slate-200 shadow-sm hover:bg-blue-500 hover:ring-blue-500 hover:shadow-md bg-slate-700 ring-0 dark:highlight-white/10 dark:hover:bg-blue-500">
                 <dl className="grid sm:block lg:grid xl:block grid-cols-2 grid-rows-2 items-center">
                   <div>

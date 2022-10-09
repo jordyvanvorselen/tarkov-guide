@@ -1,4 +1,10 @@
 @tailwind base;
+
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
 @tailwind components;
 @tailwind utilities;
 
@@ -30,4 +36,8 @@ div[class^="react-transform"] {
       background-image: url("../img/customs.png");
     }
   }
+}
+
+.max-height-80 {
+  max-height: 42.5rem;
 }
