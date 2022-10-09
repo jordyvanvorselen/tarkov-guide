@@ -20,8 +20,20 @@ const quests = [
       "reserve",
       "interchange",
     ],
-    x: 250,
-    y: 320,
+    coordinates: [
+      {
+        x: 250,
+        y: 400,
+      },
+      {
+        x: 1200,
+        y: 250,
+      },
+      {
+        x: 500,
+        y: 600,
+      },
+    ],
   },
   {
     id: 2,
@@ -36,16 +48,40 @@ const quests = [
       "reserve",
       "interchange",
     ],
-    x: 1200,
-    y: 250,
+    coordinates: [
+      {
+        x: 500,
+        y: 250,
+      },
+      {
+        x: 1050,
+        y: 500,
+      },
+      {
+        x: 200,
+        y: 700,
+      },
+    ],
   },
   {
     id: 3,
     title: "Operation Aquarius - Part 1",
     subtitle: "Therapist",
     maps: ["customs"],
-    x: 500,
-    y: 600,
+    coordinates: [
+      {
+        x: 600,
+        y: 600,
+      },
+      {
+        x: 1000,
+        y: 550,
+      },
+      {
+        x: 200,
+        y: 500,
+      },
+    ],
   },
 ];
 
@@ -62,7 +98,7 @@ const ItemSelector = ({ setQuests }) => {
     setQuests(
       quests
         .filter((x) => newSelected.includes(x.id))
-        .map((i) => ({ x: i.x, y: i.y }))
+        .flatMap((quest) => quest.coordinates)
     );
   };
 
