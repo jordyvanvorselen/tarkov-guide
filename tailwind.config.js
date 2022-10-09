@@ -3,6 +3,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
+  darkMode: "class",
   content: [
     "./static/src/**/*.{html,js,ts,jsx,tsx}",
     "./questmap/templates/**/*.html",
