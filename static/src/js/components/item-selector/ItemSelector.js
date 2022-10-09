@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 import { uniq, filter as filterArr } from "lodash";
 
@@ -19,6 +20,8 @@ const quests = [
       "reserve",
       "interchange",
     ],
+    x: 250,
+    y: 320,
   },
   {
     id: 2,
@@ -33,24 +36,33 @@ const quests = [
       "reserve",
       "interchange",
     ],
+    x: 1200,
+    y: 250,
   },
   {
     id: 3,
     title: "Operation Aquarius - Part 1",
     subtitle: "Therapist",
     maps: ["customs"],
+    x: 500,
+    y: 600,
   },
 ];
 
-const ItemSelector = () => {
+const ItemSelector = ({ setQuests }) => {
   const [selectedItems, setSelectedItems] = useState([]);
   const [filter, setFilter] = useState(null);
 
   const onItemClick = (id) => {
-    setSelectedItems(
-      selectedItems.includes(id)
-        ? filterArr(selectedItems, (x) => x !== id)
-        : uniq([...selectedItems, id])
+    const newSelected = selectedItems.includes(id)
+      ? filterArr(selectedItems, (x) => x !== id)
+      : uniq([...selectedItems, id]);
+
+    setSelectedItems(newSelected);
+    setQuests(
+      quests
+        .filter((x) => newSelected.includes(x.id))
+        .map((i) => ({ x: i.x, y: i.y }))
     );
   };
 
@@ -78,6 +90,10 @@ const ItemSelector = () => {
       </section>
     </div>
   );
+};
+
+ItemSelector.propTypes = {
+  setQuests: PropTypes.func.isRequired,
 };
 
 export default ItemSelector;

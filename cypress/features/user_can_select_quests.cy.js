@@ -1,3 +1,8 @@
+import { onlyOn } from "@cypress/skip-test";
+import { fixCypressSpec } from "../support";
+
+beforeEach(fixCypressSpec(__filename)); // eslint-disable-line
+
 describe("when the user arrives on the home page", () => {
   it("he sees the quest selector", () => {
     cy.visit("/");
@@ -57,5 +62,15 @@ describe("when the user arrives on the home page", () => {
     cy.contains(".quest", "Operation Aquarius - Part 1").should("be.visible");
     cy.contains(".quest", "Shortage").should("be.visible");
     cy.contains(".quest", "Painkiller").should("not.exist");
+  });
+
+  onlyOn("headless", () => {
+    it("when a quest is selected a circle is drawn on the map", () => {
+      cy.visit("/");
+
+      cy.contains(".quest", "Shortage").click();
+
+      cy.get(".map").get("canvas").toMatchImageSnapshot();
+    });
   });
 });

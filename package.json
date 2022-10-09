@@ -26,7 +26,9 @@
   },
   "homepage": "https://github.com/jordyvanvorselen/tarkov-guide#readme",
   "devDependencies": {
+    "@cypress/skip-test": "^2.6.1",
     "cypress": "^10.9.0",
+    "cypress-plugin-snapshots": "^1.4.4",
     "cypress-watch-and-reload": "^1.10.3",
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-react": "^7.31.8",
