@@ -1,4 +1,5 @@
 # flake8: noqa
+# type: ignore
 
 """
 Django settings for tarkov_guide project.
