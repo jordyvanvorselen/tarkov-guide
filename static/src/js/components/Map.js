@@ -2,9 +2,9 @@ import React from "react";
 
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
-const App = () => {
+const Map = () => {
   return (
-    <div className="map">
+    <div className="map relative top-20 left-8">
       <TransformWrapper>
         <TransformComponent>
           <canvas className="customs"></canvas>
@@ -14,4 +14,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Map;
