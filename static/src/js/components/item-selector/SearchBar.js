@@ -1,8 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import SearchIcon from "./SearchIcon";
 
-const SearchBar = () => {
+const SearchBar = ({ onFilterChange }) => {
   return (
     <div className="group relative rounded-md bg-slate-700 highlight-white/10 focus-within:bg-transparent">
       <SearchIcon />
@@ -11,9 +12,14 @@ const SearchBar = () => {
         aria-label="Filter quests"
         placeholder="Filter quests..."
         className="appearance-none w-full text-sm leading-6 bg-transparent text-slate-900 placeholder:text-slate-400 rounded-md py-2 pl-10 ring-1 ring-slate-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-100 placeholder:text-slate-500 dark:ring-0 dark:focus:ring-2"
+        onChange={onFilterChange}
       />
     </div>
   );
+};
+
+SearchBar.propTypes = {
+  onFilterChange: PropTypes.func.isRequired,
 };
 
 export default SearchBar;
