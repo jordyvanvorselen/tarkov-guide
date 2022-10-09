@@ -3,9 +3,16 @@ import PropTypes from "prop-types";
 
 import Image from "./Image";
 
-const Item = ({ title, subtitle, maps }) => {
+const Item = ({ id, title, subtitle, maps, onItemClick, selected }) => {
   return (
-    <li className="group cursor-pointer rounded-md p-3 bg-white ring-1 ring-slate-200 shadow-sm hover:bg-blue-500 hover:ring-blue-500 hover:shadow-md bg-slate-700 ring-0 dark:highlight-white/10 dark:hover:bg-blue-500">
+    <li
+      className={`group cursor-pointer rounded-md p-3 bg-white ring-1 ring-slate-200 shadow-sm ${
+        selected ? "bg-blue-500" : "bg-slate-700"
+      } ring-0 ${
+        selected ? "" : "hover:bg-slate-500 hover:ring-blue-500 hover:shadow-md"
+      } highlight-white/10 quest ${selected ? "selected" : ""}`}
+      onClick={() => onItemClick(id)}
+    >
       <dl className="grid sm:block lg:grid xl:block grid-cols-2 grid-rows-2 items-center">
         <div>
           <dt className="sr-only">Title</dt>
@@ -31,6 +38,7 @@ const Item = ({ title, subtitle, maps }) => {
 };
 
 Item.propTypes = {
+  id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   maps: PropTypes.arrayOf(
@@ -44,6 +52,8 @@ Item.propTypes = {
       "interchange"
     )
   ),
+  onItemClick: PropTypes.func.isRequired,
+  selected: PropTypes.bool,
 };
 
 export default Item;
