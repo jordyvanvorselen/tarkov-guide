@@ -1,4 +1,4 @@
-![Build](https://https://github.com/jordyvanvorselen/tarkov-guide/.github/workflows/ci.yml/badge.svg)
+![Build](https://https://github.com/jordyvanvorselen/tarkov-guide/actions/workflows/ci.yml/badge.svg)
 [![Python 3.6](https://img.shields.io/badge/python-3.10.5-blue.svg)](https://www.python.org/downloads/release/python-3105/)
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 
