@@ -42,15 +42,15 @@ Item.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   maps: PropTypes.arrayOf(
-    PropTypes.oneOf(
-      "customs",
-      "woods",
-      "shoreline",
-      "factory",
-      "lighthouse",
-      "reserve",
-      "interchange"
-    )
+    PropTypes.oneOf([
+      "Customs",
+      "Woods",
+      "Shoreline",
+      "Factory",
+      "Lighthouse",
+      "Reserve",
+      "Interchange",
+    ])
   ),
   onItemClick: PropTypes.func.isRequired,
   selected: PropTypes.bool,

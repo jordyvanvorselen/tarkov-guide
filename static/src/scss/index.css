@@ -22,8 +22,8 @@ div[class^="react-transform"] {
 }
 
 .map {
-  width: 75%;
-  height: 100%;
+  width: 1440px;
+  height: 1000px;
   display: inline-block;
 
   canvas {
@@ -34,6 +34,14 @@ div[class^="react-transform"] {
 
     &.customs {
       background-image: url("../img/customs.png");
+    }
+
+    &.shoreline {
+      background-image: url("../img/shoreline.png");
+    }
+
+    &.lighthouse {
+      background-image: url("../img/lighthouse.png");
     }
   }
 }
