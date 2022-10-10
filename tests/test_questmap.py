@@ -1,7 +1,9 @@
 import pytest
 
 from decimal import *
+from rest_framework.test import APIRequestFactory
 
+from questmap.viewsets import QuestViewSet
 from questmap.models import Quest, Trader, Map
 from questmap.factories import MapFactory, TraderFactory, QuestFactory
 
@@ -32,3 +34,24 @@ def test_trader_properties() -> None:
 
     assert Trader.objects.count() == 1
     assert trader.name == "Therapist"
+
+
+@pytest.mark.django_db
+def test_quests_api_endpoint() -> None:
+    factory = APIRequestFactory()
+    view = QuestViewSet.as_view({"get": "list"})
+
+    QuestFactory()
+
+    request = factory.get("/quests")
+    response = view(request)
+
+    quest = response.data[0]
+
+    assert response.status_code == 200
+
+    assert quest["name"] == "Shortage"
+    assert quest["trader"] == "Therapist"
+    assert quest["maps"] == ["Customs"]
+    assert quest["x"] == "1000.50"
+    assert quest["y"] == "500.10"
