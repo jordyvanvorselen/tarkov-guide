@@ -17,17 +17,22 @@ class TraderFactory(factory.django.DjangoModelFactory):
     name = "Therapist"
 
 
+class CoordinatesFactory(factory.django.DjangoModelFactory):
+    class Meta:
+        model = "questmap.Coordinates"
+
+    x = Decimal("1000.50")
+    y = Decimal("500.10")
+
+
 class QuestFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = "questmap.Quest"
 
     name = "Shortage"
     trader = factory.SubFactory(TraderFactory)
-    x = Decimal("1000.50")
-    y = Decimal("500.10")
 
     @factory.post_generation
-    def maps(self, create, extracted, **kwargs):
-        map = MapFactory().id
-
-        self.maps.add(map)
+    def post_gen(self, create, extracted, **kwargs):
+        self.maps.add(MapFactory().id)
+        self.coordinates_set.add(CoordinatesFactory(quest_id=self.id))

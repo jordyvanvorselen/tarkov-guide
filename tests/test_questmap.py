@@ -4,7 +4,7 @@ from decimal import *
 from rest_framework.test import APIRequestFactory
 
 from questmap.viewsets import QuestViewSet
-from questmap.models import Quest, Trader, Map
+from questmap.models import Quest, Trader, Map, Coordinates
 from questmap.factories import MapFactory, TraderFactory, QuestFactory
 
 
@@ -16,8 +16,7 @@ def test_quest_properties() -> None:
     assert quest.name == "Shortage"
     assert type(quest.trader) == Trader
     assert type(quest.maps.all()[0]) == Map
-    assert quest.x == Decimal("1000.50")
-    assert quest.y == Decimal("500.10")
+    assert type(quest.coordinates.all()[0]) == Coordinates
 
 
 @pytest.mark.django_db
@@ -50,8 +49,8 @@ def test_quests_api_endpoint() -> None:
 
     assert response.status_code == 200
 
+    assert quest["id"] == 1
     assert quest["name"] == "Shortage"
     assert quest["trader"] == "Therapist"
     assert quest["maps"] == ["Customs"]
-    assert quest["x"] == "1000.50"
-    assert quest["y"] == "500.10"
+    assert quest["coordinates"] == [{"x": Decimal("1000.50"), "y": Decimal("500.10")}]

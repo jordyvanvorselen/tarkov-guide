@@ -3,12 +3,12 @@ import Map from "./Map";
 import QuestSelector from "./quest-selector/QuestSelector";
 
 const App = () => {
-  const [quests, setQuests] = useState([]);
+  const [questCoords, setQuestCoords] = useState([]);
 
   return (
     <div className="bg-slate-900 h-full w-full dark">
-      <Map quests={quests} />
-      <QuestSelector setQuests={setQuests} />
+      <Map coordinates={questCoords} />
+      <QuestSelector setQuestCoords={setQuestCoords} />
     </div>
   );
 };

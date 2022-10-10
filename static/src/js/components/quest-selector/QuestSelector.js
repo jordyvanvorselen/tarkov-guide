@@ -1,93 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 import { uniq, filter as filterArr } from "lodash";
 
+import axios from "axios";
+import Cookies from "js-cookie";
+
 import Header from "./Header";
 import Item from "./Item";
 
-const quests = [
-  {
-    id: 1,
-    title: "Shortage",
-    subtitle: "Therapist",
-    maps: [
-      "customs",
-      "woods",
-      "shoreline",
-      "factory",
-      "lighthouse",
-      "reserve",
-      "interchange",
-    ],
-    coordinates: [
-      {
-        x: 250,
-        y: 400,
-      },
-      {
-        x: 1200,
-        y: 250,
-      },
-      {
-        x: 500,
-        y: 600,
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: "Painkiller",
-    subtitle: "Therapist",
-    maps: [
-      "customs",
-      "woods",
-      "shoreline",
-      "factory",
-      "lighthouse",
-      "reserve",
-      "interchange",
-    ],
-    coordinates: [
-      {
-        x: 500,
-        y: 250,
-      },
-      {
-        x: 1050,
-        y: 500,
-      },
-      {
-        x: 200,
-        y: 700,
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: "Operation Aquarius - Part 1",
-    subtitle: "Therapist",
-    maps: ["customs"],
-    coordinates: [
-      {
-        x: 600,
-        y: 600,
-      },
-      {
-        x: 1000,
-        y: 550,
-      },
-      {
-        x: 200,
-        y: 500,
-      },
-    ],
-  },
-];
+const QuestSelector = ({ setQuestCoords }) => {
+  useEffect(() => {
+    fetchQuests();
+  }, []);
 
-const QuestSelector = ({ setQuests }) => {
   const [selectedItems, setSelectedItems] = useState([]);
   const [filter, setFilter] = useState(null);
+  const [quests, setQuests] = useState([]);
+
+  const fetchQuests = async () => {
+    const baseUrl = Cookies.get("api-base-url");
+    const response = await axios.get(`${baseUrl}quests`);
+    setQuests(response.data);
+  };
 
   const onItemClick = (id) => {
     const newSelected = selectedItems.includes(id)
@@ -95,10 +30,10 @@ const QuestSelector = ({ setQuests }) => {
       : uniq([...selectedItems, id]);
 
     setSelectedItems(newSelected);
-    setQuests(
+    setQuestCoords(
       quests
         .filter((x) => newSelected.includes(x.id))
-        .flatMap((quest) => quest.coordinates)
+        .map((quest) => ({ coordinates: quest.coordinates }))
     );
   };
 
@@ -110,19 +45,22 @@ const QuestSelector = ({ setQuests }) => {
         <section>
           <Header onFilterChange={onFilterChange} />
           <ul className="bg-slate-50 p-4 sm:px-8 sm:pt-6 sm:pb-8 lg:p-4 xl:px-8 xl:pt-6 xl:pb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 text-sm leading-6 bg-slate-900/40 dark:ring-1 dark:ring-white/5 max-height-80 overflow-y-scroll">
-            {quests.map(
-              (q) =>
-                (!filter ||
-                  selectedItems.includes(q.id) ||
-                  q.title.toLowerCase().includes(filter.toLowerCase())) && (
-                  <Item
-                    key={q.title}
-                    {...q}
-                    onItemClick={onItemClick}
-                    selected={selectedItems.includes(q.id)}
-                  />
-                )
-            )}
+            {quests &&
+              quests.map(
+                (q) =>
+                  (!filter ||
+                    selectedItems.includes(q.id) ||
+                    q.name.toLowerCase().includes(filter.toLowerCase())) && (
+                    <Item
+                      key={q.name}
+                      {...q}
+                      title={q.name}
+                      subtitle={q.trader}
+                      onItemClick={onItemClick}
+                      selected={selectedItems.includes(q.id)}
+                    />
+                  )
+              )}
           </ul>
         </section>
       </div>
@@ -131,7 +69,7 @@ const QuestSelector = ({ setQuests }) => {
 };
 
 QuestSelector.propTypes = {
-  setQuests: PropTypes.func.isRequired,
+  setQuestCoords: PropTypes.func.isRequired,
 };
 
 export default QuestSelector;

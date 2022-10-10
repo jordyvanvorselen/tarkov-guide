@@ -43,13 +43,13 @@ Item.propTypes = {
   subtitle: PropTypes.string.isRequired,
   maps: PropTypes.arrayOf(
     PropTypes.oneOf([
-      "customs",
-      "woods",
-      "shoreline",
-      "factory",
-      "lighthouse",
-      "reserve",
-      "interchange",
+      "Customs",
+      "Woods",
+      "Shoreline",
+      "Factory",
+      "Lighthouse",
+      "Reserve",
+      "Interchange",
     ])
   ),
   onItemClick: PropTypes.func.isRequired,

@@ -19,13 +19,13 @@ const INTERCHANGE_URL =
   "https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/3/3e/Banner_interchange.png/revision/latest/scale-to-width-down/382?cb=20200811153253";
 
 const getMapUrl = (map) => {
-  if (map == "customs") return CUSTOMS_URL;
-  if (map == "woods") return WOODS_URL;
-  if (map == "shoreline") return SHORELINE_URL;
-  if (map == "factory") return FACTORY_URL;
-  if (map == "lighthouse") return LIGHTHOUSE_URL;
-  if (map == "reserve") return RESERVE_URL;
-  if (map == "interchange") return INTERCHANGE_URL;
+  if (map == "Customs") return CUSTOMS_URL;
+  if (map == "Woods") return WOODS_URL;
+  if (map == "Shoreline") return SHORELINE_URL;
+  if (map == "Factory") return FACTORY_URL;
+  if (map == "Lighthouse") return LIGHTHOUSE_URL;
+  if (map == "Reserve") return RESERVE_URL;
+  if (map == "Interchange") return INTERCHANGE_URL;
 };
 
 const Image = ({ map }) => {
@@ -43,13 +43,13 @@ const Image = ({ map }) => {
 
 Image.propTypes = {
   map: PropTypes.oneOf([
-    "customs",
-    "woods",
-    "shoreline",
-    "factory",
-    "lighthouse",
-    "reserve",
-    "interchange",
+    "Customs",
+    "Woods",
+    "Shoreline",
+    "Factory",
+    "Lighthouse",
+    "Reserve",
+    "Interchange",
   ]).isRequired,
 };
 
