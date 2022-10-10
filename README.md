@@ -16,7 +16,8 @@ This application is set up using the following frameworks:
 * Unit and integration tests are written using **Pytest**. They can be found in [./tests](./tests).
 * Feature tests are written in **Cypress**. They can be found in [./cypress/features](./cypress/features).
 * Factories to create testdata are made using **factory boy**. They can be found in [./questmap/factories.py](./questmap/factories.py).
-* The frontend is build using **parcel**. Parcel compiles the frontend assets. The assets are loaded by the [Django base template](./questmap/templates/base.html) to support live reloading.
+* The frontend is built using **parcel**. Parcel compiles the frontend assets. These assets are loaded by the [Django base template](./questmap/templates/base.html) to support live reloading.
+* **Poetry** is used to manage the Python dependencies and virtual environments.
 * **Flake8** and **black** are used to guard the code style.
 * **Mypy** is used to do static analysis of the Python type hints.
 * **Github Actions** is used for continuous integration.
@@ -41,6 +42,8 @@ To watch and automatically re-compile the frontend assets, run:
 $ yarn watch
 ```
 
+Changing the frontend assets will automatically trigger a reload by Django. :rocket:
+
 ## Testing
 
 To run the unittests, run:
@@ -55,9 +58,17 @@ To run the feature tests, run:
 $ yarn cypress run
 ```
 
-To check the type hints, run:
+You can also use the following command to open the Cypress GUI while developing:
+
+```bash
+$ yarn cypress open
+```
+
+It is advised to use this while working on the frontend. The Cypress GUI is really nice, tests are automatically ran after any change in the frontend and because the feature tests are very fast you have a way faster feedback loop than by doing manual clicking around.
 
 ## Code quality
+
+To check the type hints, run:
 
 ```bash
 $ poetry run mypy --strict .
