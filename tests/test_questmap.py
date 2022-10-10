@@ -1,6 +1,6 @@
 import pytest
 
-from decimal import *
+from decimal import Decimal
 from rest_framework.test import APIRequestFactory
 
 from questmap.viewsets import QuestViewSet

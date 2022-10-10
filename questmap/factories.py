@@ -1,6 +1,6 @@
 import factory
 
-from decimal import *
+from decimal import Decimal
 
 
 class MapFactory(factory.django.DjangoModelFactory):

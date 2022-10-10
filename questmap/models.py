@@ -30,10 +30,14 @@ class Quest(models.Model):
         return list(map(lambda m: m.name, self.maps.all()))
 
     def get_coordinates(self):
-        return list(map(lambda c: {"x": c.x, "y": c.y}, self.coordinates_set.all()))
+        coordinates = self.coordinates_set.all()
+        return list(map(lambda c: {"x": c.x, "y": c.y}, coordinates))
 
 
 class Coordinates(models.Model):
     x = models.DecimalField(max_digits=6, decimal_places=2)
     y = models.DecimalField(max_digits=6, decimal_places=2)
     quest = models.ForeignKey(Quest, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"X: {self.x}, Y: {self.y}"
