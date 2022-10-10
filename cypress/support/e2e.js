@@ -33,56 +33,22 @@ beforeEach(() => {
         id: 1,
         name: "Shortage",
         trader: "Therapist",
-        maps: [
-          "Customs",
-          "Woods",
-          "Shoreline",
-          "Factory",
-          "Lighthouse",
-          "Reserve",
-          "Interchange",
-        ],
+        maps: ["Shoreline", "Factory", "Lighthouse", "Reserve", "Interchange"],
         coordinates: [
-          {
-            x: 250,
-            y: 400,
-          },
-          {
-            x: 1200,
-            y: 250,
-          },
-          {
-            x: 500,
-            y: 600,
-          },
+          { x: 250, y: 400 },
+          { x: 1200, y: 250 },
+          { x: 500, y: 600 },
         ],
       },
       {
         id: 2,
         name: "Painkiller",
         trader: "Therapist",
-        maps: [
-          "Customs",
-          "Woods",
-          "Shoreline",
-          "Factory",
-          "Lighthouse",
-          "Reserve",
-          "Interchange",
-        ],
+        maps: ["Customs", "Woods", "Shoreline", "Factory", "Lighthouse"],
         coordinates: [
-          {
-            x: 500,
-            y: 250,
-          },
-          {
-            x: 1050,
-            y: 500,
-          },
-          {
-            x: 200,
-            y: 700,
-          },
+          { x: 500, y: 250 },
+          { x: 1050, y: 500 },
+          { x: 200, y: 700 },
         ],
       },
       {
@@ -91,18 +57,9 @@ beforeEach(() => {
         trader: "Therapist",
         maps: ["Customs"],
         coordinates: [
-          {
-            x: 600,
-            y: 600,
-          },
-          {
-            x: 1000,
-            y: 550,
-          },
-          {
-            x: 200,
-            y: 500,
-          },
+          { x: 600, y: 600 },
+          { x: 1000, y: 550 },
+          { x: 200, y: 500 },
         ],
       },
     ]
