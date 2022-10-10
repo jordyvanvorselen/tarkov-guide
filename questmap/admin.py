@@ -1,16 +1,12 @@
-# from django.contrib import admin
-
-# Register your models here.
-
 from django.contrib import admin
 from questmap.models import Map, Trader, Quest, Coordinates
 
 
-class CoordinatesInline(admin.TabularInline):
+class CoordinatesInline(admin.TabularInline):  # type: ignore
     model = Coordinates
 
 
-class QuestAdmin(admin.ModelAdmin):
+class QuestAdmin(admin.ModelAdmin):  # type: ignore
     model = Quest
     inlines = [CoordinatesInline]
 

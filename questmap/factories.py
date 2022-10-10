@@ -1,3 +1,5 @@
+# type: ignore
+
 import factory
 
 from decimal import Decimal
