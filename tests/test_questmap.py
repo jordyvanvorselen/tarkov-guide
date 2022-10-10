@@ -16,7 +16,7 @@ def test_quest_properties() -> None:
     assert quest.name == "Shortage"
     assert type(quest.trader) == Trader
     assert type(quest.maps.all()[0]) == Map
-    assert type(quest.coordinates.all()[0]) == Coordinates
+    assert type(quest.coordinates_set.all()[0]) == Coordinates
 
 
 @pytest.mark.django_db
