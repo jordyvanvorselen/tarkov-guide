@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Map from "./Map";
-import QuestSelector from "./QuestSelector";
+import QuestSelector from "./quest-selector/QuestSelector";
 
 const App = () => {
   const [quests, setQuests] = useState([]);

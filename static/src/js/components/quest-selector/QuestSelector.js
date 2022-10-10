@@ -85,7 +85,7 @@ const quests = [
   },
 ];
 
-const ItemSelector = ({ setQuests }) => {
+const QuestSelector = ({ setQuests }) => {
   const [selectedItems, setSelectedItems] = useState([]);
   const [filter, setFilter] = useState(null);
 
@@ -105,31 +105,33 @@ const ItemSelector = ({ setQuests }) => {
   const onFilterChange = (e) => setFilter(e.target.value);
 
   return (
-    <div className="relative z-10 rounded-xl bg-white shadow-xl ring-1 ring-slate-900/5 overflow-hidden my-auto xl:mt-18 dark:bg-slate-800">
-      <section>
-        <Header onFilterChange={onFilterChange} />
-        <ul className="bg-slate-50 p-4 sm:px-8 sm:pt-6 sm:pb-8 lg:p-4 xl:px-8 xl:pt-6 xl:pb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 text-sm leading-6 bg-slate-900/40 dark:ring-1 dark:ring-white/5 max-height-80 overflow-y-scroll">
-          {quests.map(
-            (q) =>
-              (!filter ||
-                selectedItems.includes(q.id) ||
-                q.title.toLowerCase().includes(filter.toLowerCase())) && (
-                <Item
-                  key={q.title}
-                  {...q}
-                  onItemClick={onItemClick}
-                  selected={selectedItems.includes(q.id)}
-                />
-              )
-          )}
-        </ul>
-      </section>
+    <div className="quest-selector absolute inset-y-0 right-0 w-96 top-20 right-8">
+      <div className="relative z-10 rounded-xl bg-white shadow-xl ring-1 ring-slate-900/5 overflow-hidden my-auto xl:mt-18 dark:bg-slate-800">
+        <section>
+          <Header onFilterChange={onFilterChange} />
+          <ul className="bg-slate-50 p-4 sm:px-8 sm:pt-6 sm:pb-8 lg:p-4 xl:px-8 xl:pt-6 xl:pb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 text-sm leading-6 bg-slate-900/40 dark:ring-1 dark:ring-white/5 max-height-80 overflow-y-scroll">
+            {quests.map(
+              (q) =>
+                (!filter ||
+                  selectedItems.includes(q.id) ||
+                  q.title.toLowerCase().includes(filter.toLowerCase())) && (
+                  <Item
+                    key={q.title}
+                    {...q}
+                    onItemClick={onItemClick}
+                    selected={selectedItems.includes(q.id)}
+                  />
+                )
+            )}
+          </ul>
+        </section>
+      </div>
     </div>
   );
 };
 
-ItemSelector.propTypes = {
+QuestSelector.propTypes = {
   setQuests: PropTypes.func.isRequired,
 };
 
-export default ItemSelector;
+export default QuestSelector;

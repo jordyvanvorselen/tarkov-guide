@@ -36,6 +36,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "jazzmin",
     "questmap.apps.QuestmapConfig",
     "django.contrib.admin",
     "django.contrib.auth",
